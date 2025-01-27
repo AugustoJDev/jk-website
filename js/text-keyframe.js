@@ -5,22 +5,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (direction == "fade-in") {
-                    if (entry.isIntersecting) {
-                        const inAnimation = `animated-fade-in`;
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        const inAnimation = direction === "fade-in" ? `animated-fade-in` : `animated-slide-in-${direction}`;
                         element.classList.add(inAnimation);
                         observer.unobserve(element); // Stop observing once the animation is added
-                    }
-                }
-                else {
-                    if (entry.isIntersecting) {
-                        const inAnimation = `animated-slide-in-${direction}`;
-                        element.classList.add(inAnimation);
-                        observer.unobserve(element); // Stop observing once the animation is added
-                    }
+                    }, 100); // Delay the animation by 100ms
                 }
             });
-        }, { threshold: 0.6 }); // Trigger when 80% of the element is visible
+        }, { threshold: 0.6 }); // Trigger when 40% of the element is visible
 
         observer.observe(element);
     }

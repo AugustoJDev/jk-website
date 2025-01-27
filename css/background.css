@@ -122,27 +122,18 @@
     animation: slideFromBottom 1s ease-out forwards;
 }
 
-.animated-slide-out-left {
-    animation: slideOutToLeft 1s ease-out forwards;
-}
-
-.animated-slide-out-right {
-    animation: slideOutToRight 1s ease-out forwards;
-}
-
-.animated-slide-out-top {
-    animation: slideOutToTop 1s ease-out forwards;
-}
-
-.animated-slide-out-bottom {
-    animation: slideOutToBottom 1s ease-out forwards;
-}
-
 /* Elements start in opacity 0 for don't interfere with page animations */
 
 /* add "section-home, medals, trophies, region, awards, projects, creator, clients, work" ids to opacity 0" */
 #section-home, #medals, #trophies, #region, #awards, #projects, #creator, #clients, #work {
     opacity: 0;
+}
+
+/* Ensure visibility on mobile devices */
+@media (max-width: 768px) {
+    #projects {
+        opacity: 1 !important;
+    }
 }
 
 /* SECTION ABOUT */
