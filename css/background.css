@@ -253,6 +253,27 @@
     line-height: 1; /* Ajuste a altura da linha conforme necessário */
 }
 
+.nav-bar ul li a,
+.main-navigation ul li a {
+    font-size: 14px !important; /* Aumentar tamanho da fonte */
+    font-weight: 500 !important; /* Tornar a fonte um pouco mais grossa */
+    text-transform: uppercase; /* Opcional: deixar tudo em maiúsculas */
+    letter-spacing: 0.5px; /* Opcional: espaçamento entre letras para melhor legibilidade */
+}
+
+/* Destaque ao passar o mouse */
+.nav-bar ul li a:hover,
+.main-navigation ul li a:hover {
+    color: #0275d8 !important; /* Cor de destaque ao passar o mouse - ajuste conforme sua paleta de cores */
+}
+
+/* Estilo para o item de menu ativo/atual */
+.nav-bar ul li.current-menu-item a,
+.main-navigation ul li.current-menu-item a {
+    font-weight: 700 !important; /* Deixar o item atual em negrito */
+    /* Você também pode adicionar uma cor ou outro estilo para destacar o item atual */
+}
+
 #map-jkdesigner {
     top: 20px;
 }
