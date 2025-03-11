@@ -45,6 +45,95 @@
     object-fit: cover;
 }
 
+/* Carousel swiper */
+
+/* Estilos existentes do carrossel... */
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    overflow: hidden; /* Garante que os slides fiquem contidos */
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    background-size: cover !important;
+    background-position: center !important;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    visibility: visible;
+  }
+  
+  /* Remova qualquer elemento de preloader residual */
+  .swiper-lazy-preloader,
+  .swiper-pagination {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  
+  /* Ajuste para garantir que a transição horizontal seja suave */
+  .swiper-wrapper {
+    transition-timing-function: ease-out !important;
+  }
+  
+  /* Modificar a camada escura para ser mais opaca */
+  .dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65); /* Aumentar a opacidade para 65% */
+    z-index: 1;
+  }
+  
+  /* Melhorar a legibilidade do texto */
+  .parallax-window {
+    z-index: 2;
+    position: relative;
+  }
+  
+  /* Estilos para melhorar o texto */
+  .enhanced-title {
+    color: rgb(255, 255, 255);
+    font-size: 5rem !important; /* Título maior */
+    font-weight: 800 !important; /* Texto mais grosso */
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra de texto para melhorar a legibilidade */
+    margin-bottom: 25px;
+    text-transform: uppercase;
+  }
+  
+  .enhanced-description {
+    font-size: 1.6rem !important; /* Descrição maior */
+    font-weight: 600 !important; /* Texto mais grosso */
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra de texto para melhorar a legibilidade */
+  }
+  
+  /* Ajustes responsivos para telas menores */
+  @media (max-width: 768px) {
+    .enhanced-title {
+      font-size: 2.5rem !important;
+    }
+  
+    .enhanced-description {
+      font-size: 1.3rem !important;
+    }
+  }
+
 /* Add these new animation keyframes */
 /* Existing animations */
 @keyframes slideInFromLeft {
